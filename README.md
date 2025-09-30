@@ -11,7 +11,7 @@ API REST para gestión de productos desarrollada con Fastify y SQLite.
 
 1. Clona el repositorio:
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/iJ3SUS/sena-products-api.git
 cd sena-products-api
 ```
 
