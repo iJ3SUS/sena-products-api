@@ -61,9 +61,6 @@ Se incluye una colección de Postman con todos los endpoints configurados para f
 ### Configuración del Entorno en Postman
 
 1. Importa la colección de Postman `sena-products-api.postman_collection.json` incluida en el proyecto
-2. Configura las siguientes variables de entorno:
-   - `baseUrl`: `http://localhost:3000`
-   - `token`: (se configurará automáticamente después del login)
 
 ### Datos de Ejemplo para Autenticación
 
