@@ -11,7 +11,7 @@ export const login = async (req, reply) => {
         if (error) {
             return reply.status(400).send({
                 message: 'Datos inválidos',
-                details: error.details
+                errors: error.details
             })
         }
 
@@ -21,7 +21,7 @@ export const login = async (req, reply) => {
 
         if (!user) {
             return reply.status(401).send({
-                error: 'Credenciales inválidas'
+                message: 'Credenciales inválidas'
             })
         }
 
@@ -29,7 +29,7 @@ export const login = async (req, reply) => {
 
         if (!isValidPassword) {
             return reply.status(401).send({
-                error: 'Credenciales inválidas'
+                message: 'Credenciales inválidas'
             })
         }
 

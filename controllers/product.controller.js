@@ -28,9 +28,9 @@ export const create = async (req, reply) => {
     const { error, value } = productSchema.validate(req.body ?? {})
     
     if (error) {
-        return reply.status(400).send({
-            message: 'Validation error',
-            details: error.details
+        return reply.status(422).send({
+            message: 'Datos requeridos',
+            errors: error.details
         })
     }
 
@@ -56,9 +56,9 @@ export const update = async (req, reply) => {
     const { error, value } = productUpdateSchema.validate(req.body)
     
     if (error) {
-        return reply.status(400).send({
-            message: 'Validation error',
-            details: error.details
+        return reply.status(422).send({
+            message: 'Datos requeridos',
+            errors: error.details
         })
     }
 

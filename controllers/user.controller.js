@@ -30,8 +30,8 @@ export const create = async (req, reply) => {
     
     if (error) {
         return reply.status(400).send({
-            message: 'Validation error',
-            details: error.details
+            message: 'Datos requeridos',
+            errors: error.details
         })
     }
 
@@ -64,8 +64,8 @@ export const update = async (req, reply) => {
     
     if (error) {
         return reply.status(400).send({
-            message: 'Validation error',
-            details: error.details
+            message: 'Datos requeridos',
+            errors: error.details
         })
     }
     
@@ -103,5 +103,5 @@ export const me = async (req, reply) => {
     const { user } = req
 
     return reply.send(user)
-    
+
 }
