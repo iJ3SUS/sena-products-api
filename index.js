@@ -2,14 +2,22 @@
 import * as ProductController from './controllers/product.controller.js'
 import * as UserController from './controllers/user.controller.js'
 import * as AuthController from './controllers/auth.controller.js'
+
 import { authHook } from './hooks/auth.js'
 
 import fastify from 'fastify'
+import cors from '@fastify/cors'
 
 const app = fastify({
   logger: {
     level: 'error'
   }
+})
+
+app.register(cors, {
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 })
 
 app.addHook('preHandler', authHook)
