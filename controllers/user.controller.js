@@ -97,3 +97,11 @@ export const remove = async (req, reply) => {
     return reply.send({ id })
     
 }
+
+export const me = async (req, reply) => {
+
+    const { user } = req
+
+    return reply.send(user)
+    
+}

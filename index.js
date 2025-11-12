@@ -34,6 +34,8 @@ app.post('/users', UserController.create)
 app.put('/users/:id', UserController.update)
 app.delete('/users/:id', UserController.remove)
 
+app.get('/me', UserController.me)
+
 app.post('/login', AuthController.login)
 
 app.listen({ port: 3000, host: '0.0.0.0' }, (err, address) => {
